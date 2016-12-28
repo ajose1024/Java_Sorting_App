@@ -18,33 +18,25 @@ So, your challenge is to come up with some code that accepts each number as it i
 presents the sorted list of numbers so far.
 
 The tests might look something like:
- 
-1.       rack = Rack.new
 
-2.       assert_equal([], rack.balls)
-
-3.       rack.add(20)
-
-4.       assert_equal([ 20 ], rack.balls)
-
-5.       rack.add(10)
-
-6.       assert_equal([ 10, 20 ], rack.balls)
-
-7.       rack.add(30)
-
-8.       assert_equal([ 10, 20, 30 ], rack.balls)
-
+```java
+rack = Rack.new
+assert_equal([], rack.balls)
+rack.add(20)
+assert_equal([ 20 ], rack.balls)
+rack.add(10)
+assert_equal([ 10, 20 ], rack.balls)
+rack.add(30)
+assert_equal([ 10, 20, 30 ], rack.balls)
+```
  
 ## Constraints
-*         Please don’t use any JDK in built sorting library or utility. You need to build your sorting routine
+* Please don’t use any JDK in built sorting library or utility. You need to build your sorting routine
 
-*         Please don’t spend a lot of time on setting up procedures to read the input or display the output.
-For our purposes a method which accepts the input would suffice
+* Please don’t spend a lot of time on setting up procedures to read the input or display the output. For our purposes a method which accepts the input would suffice
 
-*         Follow clean code / SOLID principles and stay as close as possible to object oriented programming.
-Name variables, methods, functions appropriately. Refactor when necessary.
+* Follow clean code / SOLID principles and stay as close as possible to object oriented programming. Name variables, methods, functions appropriately. Refactor when necessary.
 
-*         Avoid static, utils or helper classes
+* Avoid static, utils or helper classes
 
-*         Make reasonable assumptions and document it as a README.md
+* Make reasonable assumptions and document it as a README.md
