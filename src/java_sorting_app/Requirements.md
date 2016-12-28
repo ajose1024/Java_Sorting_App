@@ -39,9 +39,11 @@ The tests might look something like:
 ## Constraints
 *         Please don’t use any JDK in built sorting library or utility. You need to build your sorting routine
 
-*         Please don’t spend a lot of time on setting up procedures to read the input or display the output. For our purposes a method which accepts the input would suffice
+*         Please don’t spend a lot of time on setting up procedures to read the input or display the output.
+For our purposes a method which accepts the input would suffice
 
-*         Follow clean code / SOLID principles and stay as close as possible to object oriented programming. Name variables, methods, functions appropriately. Refactor when necessary.
+*         Follow clean code / SOLID principles and stay as close as possible to object oriented programming.
+Name variables, methods, functions appropriately. Refactor when necessary.
 
 *         Avoid static, utils or helper classes
 
