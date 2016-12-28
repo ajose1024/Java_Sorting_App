@@ -36,7 +36,7 @@ The tests might look something like:
 8.       assert_equal([ 10, 20, 30 ], rack.balls)
 
  
-Constraints
+## Constraints
 ·         Please don’t use any JDK in built sorting library or utility. You need to build your sorting routine
 
 ·         Please don’t spend a lot of time on setting up procedures to read the input or display the output. For our purposes a method which accepts the input would suffice
