@@ -19,10 +19,27 @@ interface number_rack_interface
      * This method adds a ball to the balls existing already on the rack
      * 
      * @access  public
-     * @param   int     ball
+     * @param   ball    int
      * @return  void
      */
     void add( int ball ) ;
+    
+    
+    /**
+     * Method:  display()
+     * 
+     * This method displays the balls already existing in the rack, sorted
+     * using the currently active sorting algorithm (through a sorting object),
+     * and in the choosen sorting order (either ascending or descending)
+     * 
+     * @access  public
+     * @param   none
+     * @return  void
+     */
+    void display() ;
+    
+    
+    
 }
 
 
@@ -40,9 +57,36 @@ interface number_rack_interface
  */
 public class number_rack implements number_rack_interface
 {
+    /**
+     * Method:  add( int ball )
+     * 
+     * This method adds a ball to the balls existing already on the rack
+     * 
+     * @access  public
+     * @param   ball    int
+     */
     @Override
     public void add( int ball )
     {
         
     }
+    
+    
+    /**
+     * Method:  display()
+     * 
+     * This method displays the balls already existing in the rack, sorted
+     * using the currently active sorting algorithm (through a sorting object),
+     * and in the choosen sorting order (either ascending or descending)
+     * 
+     * @access  public
+     */
+    @Override
+    public void display()
+    {
+        
+    }
+    
+    
+
 }
