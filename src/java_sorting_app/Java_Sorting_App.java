@@ -5,6 +5,9 @@
  */
 package java_sorting_app ;
 
+import  java_sorting_app.number_rack ;
+
+
 /**
  *
  * @author António José Gomes

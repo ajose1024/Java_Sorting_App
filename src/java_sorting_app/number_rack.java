@@ -39,6 +39,27 @@ interface number_rack_interface
     void display() ;
     
     
+    /**
+     * Method:  set_sort_algorithm( string sort_algorithm )
+     * 
+     * This method selects the sorting algoritm to be used from there after
+     * from the possible and available sorting algorithms available.
+     * 
+     * Each sorting algorithm is implements through a "sorting object", obtained
+     * from an "sorting object factory", and is saved in the number_rack obbject
+     * to be used to sort the "ball's rack", when the display method is used.
+     * 
+     * This method returns TRUE if the setting of a new sorting algorithm is
+     * accomplished successfully or FALSE otherwise.
+     * 
+     * @access  public
+     * @param   sort_algorithm  string
+     * @return  boolean
+     */
+    boolean set_sort_algorithm( String sort_algorithm ) ;
+    
+    
+    
     
 }
 
@@ -86,6 +107,34 @@ public class number_rack implements number_rack_interface
     {
         
     }
+    
+    
+    /**
+     * Method:  set_sort_algorithm( string sort_algorithm )
+     * 
+     * This method selects the sorting algoritm to be used from there after
+     * from the possible and available sorting algorithms available.
+     * 
+     * Each sorting algorithm is implements through a "sorting object", obtained
+     * from an "sorting object factory", and is saved in the number_rack obbject
+     * to be used to sort the "ball's rack", when the display method is used.
+     * 
+     * This method returns TRUE if the setting of a new sorting algorithm is
+     * accomplished successfully or FALSE otherwise.
+     * 
+     * @access  public
+     * @param   sort_algorithm  string
+     * @return  boolean
+     */
+    @Override
+    public boolean set_sort_algorithm( String sort_algorithm )
+    {
+        
+        return  true ;
+    }
+    
+    
+
     
     
 
