@@ -10,19 +10,6 @@ package java_sorting_app.sorter ;
  */
 public enum sort_type
 {
-    BUBBLE_SORT
-    {
-        public String algorithm_name()
-        {
-            return  "Name: BUBBLE_SORT" ;
-        }
-    },
+    BUBBLE_SORT ,
     SEQUENTIAL_SORT
-    {
-        public String algorithm_name()
-        {
-            return  "Name: SEQUENTIAL_SORT" ;
-        }
-    }
-    
 }

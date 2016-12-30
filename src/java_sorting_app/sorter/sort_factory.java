@@ -13,9 +13,8 @@ import  java_sorting_app.* ;
  * This is, in fact, an abstract class that will be extended by each actual
  * algorithm implementing class
  * 
- * The "sorting algorithm name" is, as for now, hardwired in this class in an
- * ENUM and for each one there is a string with the name of the "sorting algorithm",
- * which is the parameter to be used when requiring the "sorting object"
+ * The "sorting algorithm name" is, as for now, hardwired in an ENUM and for 
+ * each one there is a string with the name of the "sorting algorithm".
  * 
  * Each "sorting algorithm object" will be passed, as parameters, the data to be
  * sorted, and a parameter indicating the sorting order (either ascendent or
@@ -35,10 +34,11 @@ interface sort_factory_interface
      * sorting algorithm choosen
      * 
      * @access  public
-     * @param   sort_algorithm  String
+     * @param   sort_algorithm  ENUM
+     * @param   sort_order      ENUM
      * @return  object
      */
-    sort_factory get_sorting_filter( String sort_algorithm ) ;
+    sort_factory get_sorting_filter( sort_type sort_algorithm, sort_order sort_order ) ;
     
     
     /**
@@ -82,12 +82,28 @@ public class sort_factory implements sort_factory_interface
      * sorting algorithm choosen
      * 
      * @access  public
-     * @param   sort_algorithm  String
+     * @param   sort_algorithm  ENUM
+     * @param   sort_order      ENUM
      * @return  object
      */
     @Override
-    public sort_factory get_sorting_filter( String sort_algorithm )
+    public sort_factory get_sorting_filter( sort_type sort_algorithm, sort_order sort_order )
     {
+        switch( sort_algorithm )
+        {
+            case    BUBBLE_SORT :
+                
+                break ;
+                
+            case    SEQUENTIAL_SORT :
+                
+                break ;
+                
+            default :
+                
+                break ;
+        }
+        
         return  new sort_factory() ;
     }
             ;
