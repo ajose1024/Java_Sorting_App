@@ -5,6 +5,8 @@
  */
 package java_sorting_app ;
 
+import  java_sorting_app.sorter.* ;
+
 
 /**
  * This is the public interface definition for the Number_Rack class
@@ -94,23 +96,34 @@ interface number_rack_interface
      * Method:  set_sort_algorithm( Sort_Type sort_algorithm )
      * 
      * This method selects the sorting algoritm to be used from there after
-     * from the possible and available sorting algorithms available.
+     * from the possible and available sorting algorithms.
      * 
      * Each sorting algorithm is implements through a "sorting object", obtained
- from an "sorting object factory", and is saved in the Number_Rack obbject
- to be used to sort the "ball's rack", when the display method is used.
- 
- This method returns TRUE if the setting of a new sorting algorithm is
- accomplished successfully or FALSE otherwise.
+     * from a "sorting object factory", and is saved in the Number_Rack object
+     * to be used to sort the "ball's rack", when the display_balls method is
+     * used.
+     * 
+     * This method returns TRUE if the setting of a new sorting algorithm is
+     * accomplished successfully or FALSE otherwise.
      * 
      * @access  public
-     * @param   sort_algorithm  string
-     * @return  boolean
+     * @param   sort_algorithm  Sort_Type   // Sorting Algorithm
+     * @return  boolean                     // TRUE or FALSE
      */
-    boolean set_sort_algorithm( String sort_algorithm );
+    public boolean set_sort_algorithm( Sort_Type sort_algorithm );
     
     
-    
+    /**
+     * Method:  set_sorting_order( Sort_Order sort_order )
+     * 
+     * This method sets the sorting order to be subsequentially used (either
+     * ASCENDING or DESCENDING)
+     * 
+     * @access  public
+     * @param   sort_order  Sort_Order      // ASCENDING or DESCENDING
+     * @return  void
+     */
+    public void set_sorting_order( Sort_Order sort_order ) ;
     
 }
 
@@ -130,69 +143,84 @@ interface number_rack_interface
 public class Number_Rack implements number_rack_interface
 {
     /**
-     * Method:  add( int ball )
+     * Method:  add_ball( int ball )
      * 
      * This method adds a ball to the balls existing already on the rack
      * 
      * @access  public
      * @param   ball    int
+     * @return  void
      */
     @Override
-    public void add( int ball )
+    public void add_ball( int ball )
     {
-        
+        throw new UnsupportedOperationException( "Not supported yet." ) ;
+        //To change body of generated methods, choose Tools | Templates.
     }
     
     
     /**
-     * Method:  display()
+     * Method:  display_balls()
      * 
-     * This method displays the balls already existing in the rack, sorted
+     * This method displays the balls already existing in the number rack, sorted
      * using the currently active sorting algorithm (through a sorting object),
-     * and in the choosen sorting order (either ascending or descending)
+     * and in the choosen sorting order (either ASCENDING or DESCENDING)
      * 
      * @access  public
      */
     @Override
-    public void display()
+    public void display_balls()
     {
-        
+        throw new UnsupportedOperationException( "Not supported yet." ) ;
+        //To change body of generated methods, choose Tools | Templates.
     }
     
     
     /**
-     * Method:  set_sort_algorithm( string sort_algorithm )
+     * Method:  set_sort_algorithm( Sort_Type sort_algorithm )
      * 
      * This method selects the sorting algoritm to be used from there after
-     * from the possible and available sorting algorithms available.
+     * from the possible and available sorting algorithms.
      * 
      * Each sorting algorithm is implements through a "sorting object", obtained
- from an "sorting object factory", and is saved in the Number_Rack obbject
- to be used to sort the "ball's rack", when the display method is used.
- 
- This method returns TRUE if the setting of a new sorting algorithm is
- accomplished successfully or FALSE otherwise.
+     * from a "sorting object factory", and is saved in the Number_Rack object
+     * to be used to sort the "ball's rack", when the display_balls method is
+     * used.
+     * 
+     * This method returns TRUE if the setting of a new sorting algorithm is
+     * accomplished successfully or FALSE otherwise.
      * 
      * @access  public
-     * @param   sort_algorithm  string
-     * @return  boolean
+     * @param   sort_algorithm  Sort_Type   // Sorting Algorithm
+     * @return  boolean                     // TRUE or FALSE
      */
-    @Override
-    public boolean set_sort_algorithm( String sort_algorithm )
+     @Override
+    public boolean set_sort_algorithm( Sort_Type sort_algorithm )
     {
+        switch( sort_algorithm )
+        {
+            case    BUBBLE_SORT :
+                
+                break ;
+                
+            case    SEQUENTIAL_SORT :
+                
+                break ;
+                
+            default :
+                
+                break ;
+        }
         
         return  true ;
     }
 
     @Override
-    public void add_ball(int ball) {
+    public void set_sorting_order(Sort_Order sort_order) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
-    public void display_balls() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+
     
     
 
