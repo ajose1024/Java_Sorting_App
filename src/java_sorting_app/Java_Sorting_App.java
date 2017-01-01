@@ -5,19 +5,24 @@
  */
 package java_sorting_app ;
 
-import  java_sorting_app.number_rack ;
 import  java_sorting_app.sorter.* ;
+import  java_sorting_app.sorter.algorithms.* ;
 
 
 /**
- *
+ * This application solves the sorting problem.
+ * 
  * @author António José Gomes
  */
 public class Java_Sorting_App
 {
 
     /**
-     * @param args the command line arguments
+     * Method:  Main app execution running point
+     * 
+     * @type    STATIC method
+     * 
+     * @param   args    String[]    command line arguments
      */
     public static void main( String[] args )
     {
