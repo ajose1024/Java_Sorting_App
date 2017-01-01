@@ -8,7 +8,7 @@ package java_sorting_app.sorter ;
 /**
  * ENUM with the sorting order for the "sorting algorithms"
  */
-public enum sort_order
+public enum Sort_Order
 {
     ASCENDING ,
     DESCENDING

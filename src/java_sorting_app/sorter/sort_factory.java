@@ -38,7 +38,7 @@ interface sort_factory_interface
      * @param   sort_order      ENUM
      * @return  object
      */
-    sort_factory get_sorting_filter( sort_type sort_algorithm, sort_order sort_order ) ;
+    sort_factory get_sorting_filter( Sort_Type sort_algorithm, Sort_Order sort_order ) ;
     
     
     /**
@@ -87,7 +87,7 @@ public class sort_factory implements sort_factory_interface
      * @return  object
      */
     @Override
-    public sort_factory get_sorting_filter( sort_type sort_algorithm, sort_order sort_order )
+    public sort_factory get_sorting_filter( Sort_Type sort_algorithm, Sort_Order sort_order )
     {
         switch( sort_algorithm )
         {
@@ -122,7 +122,7 @@ public class sort_factory implements sort_factory_interface
     @Override
     public String[] get_sort_algorithm_list()
     {
-        sort_type[] sort_types = sort_type.values() ;
+        Sort_Type[] sort_types = Sort_Type.values() ;
         String[] sort_type_names = new String[ sort_types.length ] ;
 
         for( int i = 0; i < sort_types.length ; i++ )

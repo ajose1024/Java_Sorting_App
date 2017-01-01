@@ -28,8 +28,8 @@ public class Java_Sorting_App
     {
         // TODO code application logic here
         
-        System.out.println( java_sorting_app.sorter.sort_type.BUBBLE_SORT.name() ) ;
-        System.out.println( java_sorting_app.sorter.sort_type.BUBBLE_SORT ) ;
+        System.out.println( java_sorting_app.sorter.Sort_Type.BUBBLE_SORT.name() ) ;
+        System.out.println( java_sorting_app.sorter.Sort_Type.BUBBLE_SORT ) ;
         sort_factory factory = new java_sorting_app.sorter.sort_factory() ;
         String[] sort_algo_list = factory.get_sort_algorithm_list() ;
         for( int i = 0 ; i < sort_algo_list.length ; i++ )

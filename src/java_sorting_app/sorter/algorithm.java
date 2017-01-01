@@ -12,7 +12,7 @@ package java_sorting_app.sorter ;
 
 
 
-public abstract class algorithms
+public abstract class algorithm
 {
     
     /**

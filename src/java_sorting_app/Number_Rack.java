@@ -76,21 +76,22 @@ interface number_rack_interface
     
     
     /**
-     * Method:  display()
+     * Method:  display_balls()
      * 
      * This method displays the balls already existing in the rack, sorted
-     * using the currently active sorting algorithm (through a sorting object),
-     * and in the choosen sorting order (either ascending or descending)
+     * using the currently active sorting algorithm (through a sorting object
+     * obtained through the Sort_Factory object factory), and in the choosen
+     * sorting order (either ASCENDING or DESCENDING)
      * 
      * @access  public
      * @param   none
      * @return  void
      */
-    void display() ;
+    public void display_balls();
     
     
     /**
-     * Method:  set_sort_algorithm( string sort_algorithm )
+     * Method:  set_sort_algorithm( Sort_Type sort_algorithm )
      * 
      * This method selects the sorting algoritm to be used from there after
      * from the possible and available sorting algorithms available.
@@ -181,6 +182,16 @@ public class Number_Rack implements number_rack_interface
     {
         
         return  true ;
+    }
+
+    @Override
+    public void add_ball(int ball) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void display_balls() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     
