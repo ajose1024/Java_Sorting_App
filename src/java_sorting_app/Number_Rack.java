@@ -7,6 +7,8 @@ package java_sorting_app ;
 
 import  java_sorting_app.sorter.* ;
 
+import  java.util.ArrayList ;
+
 
 /**
  * This is the public interface definition for the Number_Rack class
@@ -43,7 +45,7 @@ import  java_sorting_app.sorter.* ;
  *      rack.set_sorting_algorithm( BUBBLE_SORT ) ;
  *      rack.set_sorting_order( ASCENDING ) ;
  *      rack.add_ball( 58 ) ;
- *      rack.dislay_balls() ;
+ *      rack.display_balls() ;
  *          >> BALLS IN RACK (ASCENDING): 58
  *      rack.add_ball( 34 ) ;
  *      rack.display_balls() ;
@@ -95,13 +97,13 @@ interface number_rack_interface
     /**
      * Method:  set_sort_algorithm( Sort_Type sort_algorithm )
      * 
-     * This method selects the sorting algoritm to be used from there after
-     * from the possible and available sorting algorithms.
+     * This method selects the sorting algorithm to be used from there onwards.
+     * This algorithm must be chosen from the available sorting algorithms.
      * 
-     * Each sorting algorithm is implements through a "sorting object", obtained
+     * Each sorting algorithm is implemented through a "sorting object", obtained
      * from a "sorting object factory", and is saved in the Number_Rack object
      * to be used to sort the "ball's rack", when the display_balls method is
-     * used.
+     * called.
      * 
      * This method returns TRUE if the setting of a new sorting algorithm is
      * accomplished successfully or FALSE otherwise.
@@ -132,16 +134,71 @@ interface number_rack_interface
  * Class: Number_rack
  * 
  * This class is where the random taken numbers are stored and from which the
- * appropriated method is called to show them, in sorted order, whenever needed
+ * appropriated method is called to show them, in sorted order, whenever needed.
  * 
  * Since we can have more than one sorting algorithm, through a class factory,
  * this class also presents a public interface for active sorting algorithm
- * selection
+ * selection.
  * 
  * @author  António José Gomes
  */
 public class Number_Rack implements number_rack_interface
 {
+    /**
+     * Property:    sorting_algorithm
+     * 
+     * This private property holds th currently chosen sorting algorithm
+     * 
+     * @access  private
+     * @name    sorting_algorithm
+     */
+    private Object sorting_algorithm ;
+    
+    
+    /**
+     * Property:    sorting_order
+     * 
+     * This private property holds the currently chosen sorting order (either
+     * ASCENDING or DESCENDING)
+     * 
+     * @access  private
+     * @name    sorting_order
+     */
+    private Sort_Order sorting_order ;
+    
+    
+    /**
+     * Property:    number_rack
+     * 
+     * This private property is an ArrayList, holding all th balls added to the
+     * Number_Rack.
+     * 
+     * @access  private
+     * @name    number_rack
+     */
+    private ArrayList number_rack ;
+    
+    
+    
+    /**
+     * Constructor: Number_Rack()
+     * 
+     * This is the class constructor.
+     * 
+     * @access  public
+     * @return  void
+     */
+    public void Number_Rack()
+    {
+        this.sorting_order = Sort_Order.ASCENDING ;
+        this.sorting_algorithm = null ;
+        this.number_rack= new ArrayList() ;
+    }
+
+
+
+    
+    
     /**
      * Method:  add_ball( int ball )
      * 
@@ -201,23 +258,36 @@ public class Number_Rack implements number_rack_interface
         {
             case    BUBBLE_SORT :
                 
-                break ;
+                return  true ;
+//                break ;
                 
             case    SEQUENTIAL_SORT :
                 
-                break ;
+                return  true ;
+//                break ;
                 
             default :
-                
-                break ;
+                return  false ;
+//                break ;
         }
-        
-        return  true ;
     }
-
+    
+    
+    /**
+     * Method:  set_sorting_order( Sort_Order sort_order )
+     * 
+     * This method sets the sorting order to be subsequentially used (either
+     * ASCENDING or DESCENDING)
+     * 
+     * @access  public
+     * @param   sort_order  Sort_Order      // ASCENDING or DESCENDING
+     * @return  void
+     */
     @Override
-    public void set_sorting_order(Sort_Order sort_order) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void set_sorting_order( Sort_Order sort_order )
+    {
+        throw new UnsupportedOperationException( "Not supported yet." ) ;
+        //To change body of generated methods, choose Tools | Templates.
     }
 
 
